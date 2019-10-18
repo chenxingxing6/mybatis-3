@@ -81,3 +81,13 @@ public RoutingStatementHandler(Executor executor, MappedStatement ms, Object par
 } 
 ```
 ---
+##### 5.Mapper接口是怎么给Spring进行管理的？
+> 5.1 xml挂载点，MapperScannerConfigurer
+> 5.2 注解方式，MapperScannerRegistrar
+
+---
+##### 6.sqlSession生命周期在加事务有什么变化？ 
+在没有Transaction情况下生命周期是request/method级别的
+在有Transaction情况下生命周期是Transaction范围里面的
+
+---
