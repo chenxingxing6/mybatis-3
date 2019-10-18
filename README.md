@@ -46,6 +46,7 @@ try {
 ##### 4.创建代理对象    
 BunkTypeMapper bunkTypeMapper = sqlSession.getMapper(BunkTypeMapper.class); 
 
+```html
 public <T> T getMapper(Class<T> type, SqlSession sqlSession) {
   return mapperRegistry.getMapper(type, sqlSession);
 } 
@@ -78,5 +79,5 @@ public RoutingStatementHandler(Executor executor, MappedStatement ms, Object par
         throw new ExecutorException("Unknown statement type: " + ms.getStatementType());
     }
 } 
-
+```
 ---
