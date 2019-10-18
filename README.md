@@ -16,14 +16,18 @@ MyBatis SQL Mapper Framework for Java
 ##### 1.解析xml,全局配置
 XMLConfigBuilder parser = new XMLConfigBuilder(inputStream, environment, properties);     
 
-##### 2.xml解析对应的java对象Configuration  
+---
+##### 2.xml解析对应的java对象Configuration 
+```html 
 protected Environment environment;    
 protected Properties variables = new Properties();   
 protected final Map<String, MappedStatement> mappedStatements = new StrictMap<MappedStatement>   
 protected final Map<String, Cache> caches = new StrictMap<>("Caches collection");   
 protected final Map<String, ResultMap> resultMaps = new StrictMap<>("Result Maps collection");   
 protected final Map<String, ParameterMap> parameterMaps = new StrictMap<>("Parameter Maps collection");    
+```
 
+---
 ##### 3.获取sqlSqssion   
 ```html
 private SqlSession openSessionFromDataSource(ExecutorType execType, TransactionIsolationLevel level, boolean autoCommit) {
@@ -43,6 +47,7 @@ try {
 }
 ```
 
+---
 ##### 4.创建代理对象    
 BunkTypeMapper bunkTypeMapper = sqlSession.getMapper(BunkTypeMapper.class); 
 
@@ -82,12 +87,12 @@ public RoutingStatementHandler(Executor executor, MappedStatement ms, Object par
 ```
 ---
 ##### 5.Mapper接口是怎么给Spring进行管理的？
-> 5.1 xml挂载点，MapperScannerConfigurer
-> 5.2 注解方式，MapperScannerRegistrar
+> 5.1 xml挂载点，MapperScannerConfigurer   
+> 5.2 注解方式，MapperScannerRegistrar   
 
 ---
 ##### 6.sqlSession生命周期在加事务有什么变化？ 
-在没有Transaction情况下生命周期是request/method级别的
-在有Transaction情况下生命周期是Transaction范围里面的
+> 6.1 在没有Transaction情况下生命周期是request/method级别的   
+> 6.2 在有Transaction情况下生命周期是Transaction范围里面的   
 
 ---
