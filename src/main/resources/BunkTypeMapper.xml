@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.BunkTypeMapper">
+    <resultMap id="BaseResultMap" type="com.demo.BunkType">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="mall_entity_id" property="mallEntityId" jdbcType="VARCHAR"/>
+        <result column="bunk_type_no" property="bunkTypeNo" jdbcType="SMALLINT"/>
+        <result column="bunk_type_name" property="bunkTypeName" jdbcType="VARCHAR"/>
+        <result column="is_valid" property="isValid" jdbcType="TINYINT"/>
+        <result column="create_user" property="createUser" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="BIGINT"/>
+        <result column="op_user" property="opUser" jdbcType="VARCHAR"/>
+        <result column="op_time" property="opTime" jdbcType="BIGINT"/>
+        <result column="last_ver" property="lastVer" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    id, mall_entity_id, bunk_type_no, bunk_type_name,
+    is_valid, create_user, create_time, op_user, op_time, last_ver
+  </sql>
+
+    <select id="listBunkType" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from bunk_type where mall_entity_id = #{mallEntityId,jdbcType=VARCHAR} and is_valid=1
+    </select>
+</mapper>

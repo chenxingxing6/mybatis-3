@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-       Copyright 2009-2019 the original author or authors.
-
-       Licensed under the Apache License, Version 2.0 (the "License");
-       you may not use this file except in compliance with the License.
-       You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-       Unless required by applicable law or agreed to in writing, software
-       distributed under the License is distributed on an "AS IS" BASIS,
-       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-       See the License for the specific language governing permissions and
-       limitations under the License.
-
--->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -27,108 +10,12 @@
   </parent>
 
   <artifactId>mybatis</artifactId>
-  <version>3.5.3-SNAPSHOT</version>
+  <version>3.5.3-lxh-SNAPSHOT</version>
   <packaging>jar</packaging>
-
   <name>mybatis</name>
-  <description>
-    The MyBatis SQL mapper framework makes it easier to use a relational database with object-oriented
-    applications. MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or
-    annotations. Simplicity is the biggest advantage of the MyBatis data mapper over object relational mapping
-    tools.
-  </description>
   <url>http://www.mybatis.org/mybatis-3</url>
 
   <inceptionYear>2009</inceptionYear>
-
-  <contributors>
-    <contributor>
-      <name>Adam Gent</name>
-      <email>adam.gent@evocatus.com</email>
-    </contributor>
-    <contributor>
-      <name>Andrea Selva</name>
-      <email>selva.andre@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Antonio Sánchez</name>
-      <email>juntandolineas@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Arkadi Shishlov</name>
-      <email>arkadi.shishlov@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Axel Doerfler</name>
-      <email>axel.doerfler@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Chris Dadej</name>
-      <email>chris.dadej@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Denis Vygovskiy</name>
-      <email>qizant@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Franta Mejta</name>
-      <email>mejta@rewor.cz</email>
-    </contributor>
-    <contributor>
-      <name>Jurriaan Pruys</name>
-      <email>jurriaan@pruys.com</email>
-    </contributor>
-    <contributor>
-      <name>Keith Wong</name>
-      <email>wongkwl@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Lasse Voss</name>
-      <email>lasse.voss@motor-talk-gmbh.de</email>
-    </contributor>
-    <contributor>
-      <name>Luke Stevens</name>
-      <email>nosuchluke@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Paul Krause</name>
-      <email>paulkrause88@alum.mit.edu</email>
-    </contributor>
-    <contributor>
-      <name>Peter Leibiger</name>
-      <email>kuhnroyal@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Riccardo Cossu</name>
-      <email>riccardo.cossu@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Tomáš Neuberg</name>
-      <email>neuberg@m-atelier.cz</email>
-    </contributor>
-  </contributors>
-
-  <scm>
-    <url>http://github.com/mybatis/mybatis-3</url>
-    <connection>scm:git:ssh://github.com/mybatis/mybatis-3.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/mybatis/mybatis-3.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-  <issueManagement>
-    <system>GitHub Issue Management</system>
-    <url>https://github.com/mybatis/mybatis-3/issues</url>
-  </issueManagement>
-  <ciManagement>
-    <system>Travis CI</system>
-    <url>https://travis-ci.org/mybatis/mybatis-3/</url>
-  </ciManagement>
-  <distributionManagement>
-    <site>
-      <id>gh-pages</id>
-      <name>Mybatis GitHub Pages</name>
-      <url>git:ssh://git@github.com/mybatis/mybatis-3.git?gh-pages#</url>
-    </site>
-  </distributionManagement>
 
   <properties>
     <clirr.comparisonVersion>3.4.6</clirr.comparisonVersion>
@@ -145,6 +32,12 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.56</version>
+    </dependency>
+
     <dependency>
       <groupId>ognl</groupId>
       <artifactId>ognl</artifactId>
@@ -197,6 +90,7 @@
     </dependency>
 
     <!-- Test dependencies -->
+    <!-- junit 核心测试引擎 -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
