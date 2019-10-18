@@ -3,7 +3,7 @@
 <mapper namespace="com.demo.BunkTypeMapper">
     <resultMap id="BaseResultMap" type="com.demo.BunkType">
         <id column="id" property="id" jdbcType="BIGINT"/>
-        <result column="mall_entity_id" property="mallEntityId" jdbcType="VARCHAR"/>
+        <result column="mall_entity_id" property="mallEntityId" jdbcType="VARCHAR" typeHandler="com.demo.typehandler.MyTypeHandler"/>
         <result column="bunk_type_no" property="bunkTypeNo" jdbcType="SMALLINT"/>
         <result column="bunk_type_name" property="bunkTypeName" jdbcType="VARCHAR"/>
         <result column="is_valid" property="isValid" jdbcType="TINYINT"/>

@@ -9,6 +9,10 @@
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+
+    <typeHandlers>
+        <typeHandler handler="com.demo.typehandler.MyTypeHandler"/>
+    </typeHandlers>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
