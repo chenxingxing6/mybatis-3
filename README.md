@@ -1,16 +1,10 @@
-MyBatis SQL Mapper Framework for Java
-=====================================
-
-[![Coverage Status](https://coveralls.io/repos/mybatis/mybatis-3/badge.svg?branch=master&service=github)](https://coveralls.io/github/mybatis/mybatis-3?branch=master)
-[![Stack Overflow](http://img.shields.io/:stack%20overflow-mybatis-brightgreen.svg)](http://stackoverflow.com/questions/tagged/mybatis)
-
----
 ## mybatis-3源码分析
-> 1.mybatis运行流程大致了解
-> 2.TypeHandler自己定义   
-> 3.plugin自己定义  
-> 4.源码追踪，debug大致看一下关键代码   
+1.mybatis运行流程大致了解     
+2.TypeHandler自己定义          
+3.plugin自己定义       
+4.源码追踪，debug大致看一下关键代码          
 
+快捷链接：https://www.cnblogs.com/zhjh256/p/8512392.html   
 ---
 
 ##### 1.解析xml,全局配置
@@ -87,12 +81,12 @@ public RoutingStatementHandler(Executor executor, MappedStatement ms, Object par
 ```
 ---
 ##### 5.Mapper接口是怎么给Spring进行管理的？
-> 5.1 xml挂载点，MapperScannerConfigurer   
-> 5.2 注解方式，MapperScannerRegistrar   
+5.1 xml挂载点，MapperScannerConfigurer     
+5.2 注解方式，MapperScannerRegistrar     
 
 ---
 ##### 6.sqlSession生命周期在加事务有什么变化？ 
-> 6.1 在没有Transaction情况下生命周期是request/method级别的   
-> 6.2 在有Transaction情况下生命周期是Transaction范围里面的   
+6.1 在没有Transaction情况下生命周期是request/method级别的      
+6.2 在有Transaction情况下生命周期是Transaction范围里面的      
 
 ---
